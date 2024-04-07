@@ -50,8 +50,8 @@ def main():
     st.write("Enter the city name to predict the weather.")
     city_name = st.text_input('Enter city name')
     temp = st.slider("Temperature (°C)", min_value=-20, max_value=60, value=20)
-    temp_min=st.slider("Temperature minimun (°C)", min_value=-20, max_value=temp+1, value=20)
-    temp_max=st.slider("Temperature maximum (°C)", min_value=temp-1, max_value=60, value=20)
+    temp_min=st.slider("Temperature minimun (°C)", min_value=-20, max_value=40, value=20)
+    temp_max=st.slider("Temperature maximum (°C)", min_value=1, max_value=65, value=20)
     st.markdown(
     f"""
     <style>

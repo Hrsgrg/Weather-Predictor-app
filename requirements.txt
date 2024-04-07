@@ -1,5 +1,8 @@
 streamlit
 pandas 
 numpy
-sklearn
+RandomForestClassifier
+train_test_split
+LabelEncoder
 datetime
+LabelEncoder

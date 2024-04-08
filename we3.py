@@ -8,7 +8,7 @@ from datetime import datetime
 
 
 def load_data():
-    we = pd.read_csv("sample_dataset.csv")
+    we = pd.read_csv("output.csv")
     
     return we
 

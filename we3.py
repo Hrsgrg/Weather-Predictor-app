@@ -33,7 +33,7 @@ def preprocess_data(we):
     label_encoder = LabelEncoder()
     for col in columns_to_encode:
         we[col + '_encoded'] = label_encoder.fit_transform(we[col])
-    we.drop(['dt_txt', 'region', 'state'], axis=1, inplace=True)
+    we.drop(['dt_txt', 'region', 'state','clouds'], axis=1, inplace=True)
     X = we.drop(['main', 'description', 'city_name'], axis=1)
     y = we[['main', 'description']]
     return X, y, we
@@ -61,7 +61,6 @@ def main():
     temp_max=st.slider("Temperature max(°C)", min_value=1, max_value=60, value=20)
 
     humidity=st.number_input("enter the humidity in g/m³")
-    clouds=st.number_input("enter the clouds in okta")
     wind_speed=st.number_input("enter the wind speed in kmh")
     time_input = st.sidebar.time_input("Select Time")
     
